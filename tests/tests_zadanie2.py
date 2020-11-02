@@ -17,6 +17,10 @@ class RomanNumerals:
 
         if num100 == 1:
             rom += "C"
+        elif num100 == 2:
+            rom += "CC"
+        elif num100 == 3:
+            rom += "CCC"
 
         if num10 == 1:
             rom += "X"
