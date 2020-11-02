@@ -8,25 +8,11 @@ class Hamming:
         if a == "" and b == "":
             return 0
 
-        if len(a) == 0:
+        if len(a) == 0 or len(b) == 0:
             raise ValueError("ValueError")
 
-        if len(b) == 0:
+        if len(a) != len(b):
             raise ValueError("ValueError")
-
-        if len(a) > len(b):
-            raise ValueError("ValueError")
-
-        if len(a) < len(b):
-            raise ValueError("ValueError")
-
-
-
-        if len(a) == 1 and len(b) == 1:
-            if a[0] == b[0]:
-                return 0
-            else:
-                return 1
 
         if a == b:
             return 0
@@ -36,10 +22,6 @@ class Hamming:
                 if a[i] != b[i]:
                     count += 1
             return count
-
-
-
-
 
 
 
