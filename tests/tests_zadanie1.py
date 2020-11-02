@@ -6,7 +6,8 @@ class Hamming:
         if a == "" and b == "":
             return 0
 
-        
+        if a == b:
+            return 0
 
         if len(a) == 1 and len(b) == 1 and a[0] == b[0]:
             return 0
