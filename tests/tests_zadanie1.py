@@ -6,10 +6,14 @@ class Hamming:
         if a == "" and b == "":
             return 0
 
-        if a[0] == b[0]:
+        
+
+        if len(a) == 1 and len(b) == 1 and a[0] == b[0]:
             return 0
         else:
             return 1
+
+
 
 
 
@@ -34,7 +38,6 @@ class HammingTest(unittest.TestCase):
     def test_single_letter_different_strands(self):
         self.assertEqual(self.temp.distance("G", "T"), 1)
 
-    @unittest.SkipTest
     def test_long_identical_strands(self):
         self.assertEqual(self.temp.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
 
