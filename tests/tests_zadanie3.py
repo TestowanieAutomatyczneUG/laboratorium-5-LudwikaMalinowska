@@ -30,11 +30,8 @@ class Christmas:
     ]
 
     def xmas(self, numberOfVerses, verseNumber):
-
-        # for verse in self.daysOfXmas:
-        #     print(verse)
-
-        return self.daysOfXmas[verseNumber]
+        if (numberOfVerses == 1):
+            return self.daysOfXmas[verseNumber]
 
 
 
