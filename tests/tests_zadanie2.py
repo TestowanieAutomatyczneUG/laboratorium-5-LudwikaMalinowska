@@ -136,9 +136,9 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_400_being_500_100_is_cd(self):
         self.assertEqual(self.temp.roman(402), "CDII")
 
-    @unittest.SkipTest
+    # @unittest.SkipTest
     def test_500_is_a_single_d(self):
-        self.assertEqual(roman(575), "DLXXV")
+        self.assertEqual(self.temp.roman(575), "DLXXV")
 
     @unittest.SkipTest
     def test_900_being_1000_100_is_cm(self):
