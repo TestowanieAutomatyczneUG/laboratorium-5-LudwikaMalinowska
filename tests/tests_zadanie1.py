@@ -4,6 +4,10 @@ import unittest
 class Hamming:
 
     def distance(self, a, b):
+
+        if len(a) > len(b):
+            raise ValueError("ValueError")
+
         if a == "" and b == "":
             return 0
 
@@ -56,8 +60,9 @@ class HammingTest(unittest.TestCase):
         self.assertEqual(self.temp.distance("GGACGGATTCTG", "AGGACGGATTCT"), 9)
 
     def test_disallow_first_strand_longer(self):
-        with self.assertRaisesWithMessage(ValueError):
-            self.temp.distance("AATG", "AAA")
+        # with self.assertRaisesWithMessage(ValueError):
+        #     self.temp.distance("AATG", "AAA")
+        self.assertRaises(ValueError, self.temp.distance, "AATG", "AAA")
 
     @unittest.SkipTest
     def test_disallow_second_strand_longer(self):
