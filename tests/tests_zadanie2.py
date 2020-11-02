@@ -15,9 +15,9 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_1_is_a_single_i(self):
         self.assertEqual(self.temp.roman(1), "I")
 
-    @unittest.SkipTest
+    # @unittest.SkipTest
     def test_2_is_two_i_s(self):
-        self.assertEqual(roman(2), "II")
+        self.assertEqual(self.temp.roman(2), "II")
 
     @unittest.SkipTest
     def test_3_is_three_i_s(self):
