@@ -9,8 +9,17 @@ class RomanNumerals:
         num = n % 10
         num10 = int(n/10)
 
-        for i in range (num10):
+        # for i in range (num10):
+        #     rom += "X"
+
+        if num10 == 1:
             rom += "X"
+        elif num10 == 2:
+            rom += "XX"
+        elif num10 == 3:
+            rom += "XXX"
+        elif num10 == 4:
+            rom += "XL"
 
         if num == 1:
             rom += "I"
@@ -26,8 +35,15 @@ class RomanNumerals:
             rom += "VI"
         elif num == 7:
             rom += "VII"
+        elif num == 8:
+            rom += "VIII"
         elif num == 9:
             rom += "IX"
+
+
+
+
+
 
         return rom
 
