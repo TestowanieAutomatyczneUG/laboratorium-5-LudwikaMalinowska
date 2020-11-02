@@ -25,6 +25,14 @@ class RomanNumerals:
             rom += "CD"
         elif num100 == 5:
             rom += "D"
+        elif num100 == 6:
+            rom += "DC"
+        elif num100 == 7:
+            rom += "DCC"
+        elif num100 == 8:
+            rom += "DCCC"
+        elif num100 == 9:
+            rom += "CM"
 
         if num10 == 1:
             rom += "X"
