@@ -28,6 +28,8 @@ class RomanNumerals:
             rom += "LXX"
         elif num10 == 8:
             rom += "LXXX"
+        elif num10 == 9:
+            rom += "XC"
 
         if num == 1:
             rom += "I"
