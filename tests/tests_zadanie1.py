@@ -90,7 +90,6 @@ class HammingTest(unittest.TestCase):
         #     self.temp.distance("G", "")
         self.assertRaises(ValueError, self.temp.distance, "G", "")
 
-    @unittest.SkipTest
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 
