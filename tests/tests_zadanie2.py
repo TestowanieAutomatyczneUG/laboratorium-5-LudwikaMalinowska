@@ -142,9 +142,9 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_500_is_a_single_d(self):
         self.assertEqual(self.temp.roman(575), "DLXXV")
 
-    @unittest.SkipTest
+    # @unittest.SkipTest
     def test_900_being_1000_100_is_cm(self):
-        self.assertEqual(roman(911), "CMXI")
+        self.assertEqual(self.temp.roman(911), "CMXI")
 
     @unittest.SkipTest
     def test_1000_is_a_single_m(self):
