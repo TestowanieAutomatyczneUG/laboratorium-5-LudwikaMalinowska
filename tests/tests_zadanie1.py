@@ -11,6 +11,9 @@ class Hamming:
         if len(a) == 0:
             raise ValueError("ValueError")
 
+        if len(b) == 0:
+            raise ValueError("ValueError")
+
         if len(a) > len(b):
             raise ValueError("ValueError")
 
@@ -83,8 +86,9 @@ class HammingTest(unittest.TestCase):
         self.assertRaises(ValueError, self.temp.distance, "", "G")
 
     def test_disallow_right_empty_strand(self):
-        with self.assertRaisesWithMessage(ValueError):
-            self.temp.distance("G", "")
+        # with self.assertRaisesWithMessage(ValueError):
+        #     self.temp.distance("G", "")
+        self.assertRaises(ValueError, self.temp.distance, "G", "")
 
     @unittest.SkipTest
     def assertRaisesWithMessage(self, exception):
