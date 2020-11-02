@@ -13,6 +13,8 @@ class RomanNumerals:
             return "IV"
         elif num == 5:
             return "V"
+        elif num == 6:
+            return "VI"
 
 
 
