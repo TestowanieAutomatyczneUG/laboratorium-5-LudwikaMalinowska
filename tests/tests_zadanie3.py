@@ -49,3 +49,7 @@ class ChristmasTest(unittest.TestCase):
     def test_first_verse(self):
         firstVerse = "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree."
         self.assertEqual(self.temp.xmas(1,0), firstVerse)
+
+    def test_fifth_verse(self):
+        fifthVerse = "On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."
+        self.assertEqual(self.temp.xmas(1,4), fifthVerse)
