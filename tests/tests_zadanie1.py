@@ -5,14 +5,19 @@ class Hamming:
 
     def distance(self, a, b):
 
+        if a == "" and b == "":
+            return 0
+
+        if len(a) == 0:
+            raise ValueError("ValueError")
+
         if len(a) > len(b):
             raise ValueError("ValueError")
 
         if len(a) < len(b):
             raise ValueError("ValueError")
 
-        if a == "" and b == "":
-            return 0
+
 
         if len(a) == 1 and len(b) == 1:
             if a[0] == b[0]:
@@ -73,8 +78,9 @@ class HammingTest(unittest.TestCase):
         self.assertRaises(ValueError, self.temp.distance, "ATA", "AGTG")
 
     def test_disallow_left_empty_strand(self):
-        with self.assertRaisesWithMessage(ValueError):
-            self.temp.distance("", "G")
+        # with self.assertRaisesWithMessage(ValueError):
+        #     self.temp.distance("", "G")
+        self.assertRaises(ValueError, self.temp.distance, "", "G")
 
     @unittest.SkipTest
     def test_disallow_right_empty_strand(self):
