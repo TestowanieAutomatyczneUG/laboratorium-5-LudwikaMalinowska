@@ -20,6 +20,8 @@ class RomanNumerals:
             rom += "XXX"
         elif num10 == 4:
             rom += "XL"
+        elif num10 == 5:
+            rom += "L"
         elif num10 == 6:
             rom += "LX"
         elif num10 == 7:
