@@ -8,6 +8,9 @@ class Hamming:
         if len(a) > len(b):
             raise ValueError("ValueError")
 
+        if len(a) < len(b):
+            raise ValueError("ValueError")
+
         if a == "" and b == "":
             return 0
 
@@ -65,8 +68,9 @@ class HammingTest(unittest.TestCase):
         self.assertRaises(ValueError, self.temp.distance, "AATG", "AAA")
 
     def test_disallow_second_strand_longer(self):
-        with self.assertRaisesWithMessage(ValueError):
-            self.temp.distance("ATA", "AGTG")
+        # with self.assertRaisesWithMessage(ValueError):
+        #     self.temp.distance("ATA", "AGTG")
+        self.assertRaises(ValueError, self.temp.distance, "ATA", "AGTG")
 
     @unittest.SkipTest
     def test_disallow_left_empty_strand(self):
