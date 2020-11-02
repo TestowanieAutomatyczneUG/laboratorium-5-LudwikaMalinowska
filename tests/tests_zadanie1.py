@@ -71,24 +71,24 @@ class HammingTest(unittest.TestCase):
         self.assertEqual(self.temp.distance("GGACGGATTCTG", "AGGACGGATTCT"), 9)
 
     def test_disallow_first_strand_longer(self):
-        # with self.assertRaisesWithMessage(ValueError):
-        #     self.temp.distance("AATG", "AAA")
-        self.assertRaises(ValueError, self.temp.distance, "AATG", "AAA")
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.distance("AATG", "AAA")
+        # self.assertRaises(ValueError, self.temp.distance, "AATG", "AAA")
 
     def test_disallow_second_strand_longer(self):
-        # with self.assertRaisesWithMessage(ValueError):
-        #     self.temp.distance("ATA", "AGTG")
-        self.assertRaises(ValueError, self.temp.distance, "ATA", "AGTG")
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.distance("ATA", "AGTG")
+        # self.assertRaises(ValueError, self.temp.distance, "ATA", "AGTG")
 
     def test_disallow_left_empty_strand(self):
-        # with self.assertRaisesWithMessage(ValueError):
-        #     self.temp.distance("", "G")
-        self.assertRaises(ValueError, self.temp.distance, "", "G")
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.distance("", "G")
+        # self.assertRaises(ValueError, self.temp.distance, "", "G")
 
     def test_disallow_right_empty_strand(self):
-        # with self.assertRaisesWithMessage(ValueError):
-        #     self.temp.distance("G", "")
-        self.assertRaises(ValueError, self.temp.distance, "G", "")
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.distance("G", "")
+        # self.assertRaises(ValueError, self.temp.distance, "G", "")
 
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
