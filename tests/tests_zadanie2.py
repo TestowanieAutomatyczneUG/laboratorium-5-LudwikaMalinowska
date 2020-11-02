@@ -13,6 +13,10 @@ class RomanNumerals:
 
         if num1000 == 1:
             rom += "M"
+        elif num1000 == 2:
+            rom += "MM"
+        elif num1000 == 3:
+            rom += "MMM"
 
         if num100 == 1:
             rom += "C"
@@ -160,3 +164,4 @@ class RomanNumeralsTest(unittest.TestCase):
     # @unittest.SkipTest
     def test_3000_is_three_m_s(self):
         self.assertEqual(self.temp.roman(3000), "MMM")
+
