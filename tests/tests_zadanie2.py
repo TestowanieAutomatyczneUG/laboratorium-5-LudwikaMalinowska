@@ -2,8 +2,11 @@ import unittest
 
 class RomanNumerals:
     def roman(self, num):
+
         if num == 1:
             return "I"
+        elif num == 2:
+            return "II"
 
 
 
