@@ -22,7 +22,7 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_2_is_two_i_s(self):
         self.assertEqual(self.temp.roman(2), "II")
 
-    @unittest.SkipTest
+    # @unittest.SkipTest
     def test_3_is_three_i_s(self):
         self.assertEqual(roman(3), "III")
 
