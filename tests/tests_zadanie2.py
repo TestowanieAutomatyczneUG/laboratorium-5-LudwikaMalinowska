@@ -3,14 +3,13 @@ import unittest
 class RomanNumerals:
     def roman(self, n):
 
-
-
         rom = ""
         num = n % 10
         num10 = int((n % 100)/10)
         num100 = int(n%1000/100)
         num1000 =  int(n%10000/1000)
 
+        #tysiące
         if num1000 == 1:
             rom += "M"
         elif num1000 == 2:
@@ -18,6 +17,7 @@ class RomanNumerals:
         elif num1000 == 3:
             rom += "MMM"
 
+        #setki
         if num100 == 1:
             rom += "C"
         elif num100 == 2:
@@ -37,6 +37,7 @@ class RomanNumerals:
         elif num100 == 9:
             rom += "CM"
 
+        #dziesiątki
         if num10 == 1:
             rom += "X"
         elif num10 == 2:
@@ -56,6 +57,7 @@ class RomanNumerals:
         elif num10 == 9:
             rom += "XC"
 
+        #jedności
         if num == 1:
             rom += "I"
         elif num == 2:
@@ -74,10 +76,6 @@ class RomanNumerals:
             rom += "VIII"
         elif num == 9:
             rom += "IX"
-
-
-
-
 
 
         return rom
