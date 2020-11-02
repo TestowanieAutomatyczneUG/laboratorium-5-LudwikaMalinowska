@@ -64,7 +64,6 @@ class HammingTest(unittest.TestCase):
         #     self.temp.distance("AATG", "AAA")
         self.assertRaises(ValueError, self.temp.distance, "AATG", "AAA")
 
-    @unittest.SkipTest
     def test_disallow_second_strand_longer(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.distance("ATA", "AGTG")
