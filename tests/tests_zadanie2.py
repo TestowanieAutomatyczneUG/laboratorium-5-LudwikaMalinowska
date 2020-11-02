@@ -23,6 +23,8 @@ class RomanNumerals:
             rom += "CCC"
         elif num100 == 4:
             rom += "CD"
+        elif num100 == 5:
+            rom += "D"
 
         if num10 == 1:
             rom += "X"
