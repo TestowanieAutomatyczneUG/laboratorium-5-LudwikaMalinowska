@@ -8,12 +8,11 @@ class RomanNumerals:
         rom = ""
         num = n % 10
         num10 = int((n % 100)/10)
-        num100 = int(n/100)
-        # print(num100)
-        # print("num10 ", num10)
+        num100 = int(n%1000/100)
+        num1000 =  int(n%10000/1000)
 
-        # for i in range (num10):
-        #     rom += "X"
+        if num1000 == 1:
+            rom += "M"
 
         if num100 == 1:
             rom += "C"
