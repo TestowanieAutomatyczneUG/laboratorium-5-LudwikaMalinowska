@@ -29,7 +29,6 @@ class HammingTest(unittest.TestCase):
     def test_single_letter_identical_strands(self):
         self.assertEqual(self.temp.distance("A", "A"), 0)
 
-    @unittest.SkipTest
     def test_single_letter_different_strands(self):
         self.assertEqual(self.temp.distance("G", "T"), 1)
 
