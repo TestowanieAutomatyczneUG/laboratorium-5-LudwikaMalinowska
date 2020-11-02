@@ -106,9 +106,9 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_50_is_a_single_l(self):
         self.assertEqual(self.temp.roman(59), "LIX")
 
-    @unittest.SkipTest
+    # @unittest.SkipTest
     def test_90_being_100_10_is_xc(self):
-        self.assertEqual(roman(93), "XCIII")
+        self.assertEqual(self.temp.roman(93), "XCIII")
 
     @unittest.SkipTest
     def test_100_is_a_single_c(self):
