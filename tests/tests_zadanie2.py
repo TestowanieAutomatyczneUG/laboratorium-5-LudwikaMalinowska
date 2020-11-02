@@ -1,22 +1,36 @@
 import unittest
 
 class RomanNumerals:
-    def roman(self, num):
+    def roman(self, n):
+
+
+
+        rom = ""
+        num = n % 10
+        num10 = int(n/10)
+
+        for i in range (num10):
+            rom += "X"
 
         if num == 1:
-            return "I"
+            rom += "I"
         elif num == 2:
-            return "II"
+            rom += "II"
         elif num == 3:
-            return "III"
+            rom += "III"
         elif num == 4:
-            return "IV"
+            rom += "IV"
         elif num == 5:
-            return "V"
+            rom += "V"
         elif num == 6:
-            return "VI"
+            rom += "VI"
+        elif num == 7:
+            rom += "VII"
         elif num == 9:
-            return "IX"
+            rom += "IX"
+
+        return rom
+
 
 
 
