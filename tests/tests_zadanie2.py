@@ -9,6 +9,8 @@ class RomanNumerals:
             return "II"
         elif num == 3:
             return "III"
+        elif num == 4:
+            return "IV"
 
 
 
