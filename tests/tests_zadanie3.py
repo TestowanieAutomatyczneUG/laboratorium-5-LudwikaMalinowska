@@ -50,3 +50,20 @@ class ChristmasTest(unittest.TestCase):
     def test_fifth_verse(self):
         fifthVerse = "On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."
         self.assertEqual(self.temp.xmas(1,4), fifthVerse)
+
+    def test_verses_from_a_to_b(self):
+        verseList = [
+
+            "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
+
+            "On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.",
+
+            "On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.",
+        ]
+
+        self.assertEqual(self.temp.xmas(0, 3), verseList)
+
+
+
+
+
