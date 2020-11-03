@@ -29,8 +29,7 @@ class Christmas:
         "On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."
     ]
 
-    def xmas(self, numberOfVerses, verseNumber):
-        if (numberOfVerses == 1):
+    def getOneVerse(self, verseNumber):
             return self.daysOfXmas[verseNumber]
 
     def getVerses(self, fromVerse, toVerse):
@@ -55,19 +54,16 @@ class ChristmasTest(unittest.TestCase):
 
     def test_first_verse(self):
         firstVerse = "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree."
-        self.assertEqual(self.temp.xmas(1,0), firstVerse)
+        self.assertEqual(self.temp.getOneVerse(0), firstVerse)
 
     def test_fifth_verse(self):
         fifthVerse = "On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."
-        self.assertEqual(self.temp.xmas(1,4), fifthVerse)
+        self.assertEqual(self.temp.getOneVerse(4), fifthVerse)
 
     def test_verses_from_0_to_3(self):
         verseList = [
-
             "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
-
             "On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.",
-
             "On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.",
         ]
 
