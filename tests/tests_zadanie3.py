@@ -87,6 +87,9 @@ class ChristmasTest(unittest.TestCase):
 
         self.assertEqual(self.temp.getAllSong(), song)
 
+    def test_one_verse_disallow_not_number(self):
+        self.assertRaises(ValueError, self.temp.getOneVerse, "1")
+
 
 
 
