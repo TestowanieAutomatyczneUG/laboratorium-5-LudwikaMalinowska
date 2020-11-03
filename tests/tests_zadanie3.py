@@ -49,8 +49,6 @@ class Christmas:
         return self.daysOfXmas
 
 
-
-
 import unittest
 
 
