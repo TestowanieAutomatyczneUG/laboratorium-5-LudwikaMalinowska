@@ -99,6 +99,9 @@ class ChristmasTest(unittest.TestCase):
     def test_verses_disallow_not_number_left(self):
         self.assertRaises(ValueError, self.temp.getVerses, "1", 1)
 
+    def test_verses_disallow_not_number_right(self):
+        self.assertRaises(ValueError, self.temp.getVerses, 1, "1")
+
 
 
 
