@@ -33,6 +33,13 @@ class Christmas:
         if (numberOfVerses == 1):
             return self.daysOfXmas[verseNumber]
 
+    def getVerses(self, fromVerse, toVerse):
+        verses = []
+        for i in range (fromVerse, toVerse, 1):
+            verses.append(self.daysOfXmas[i])
+
+        return verses
+
 
 
 
@@ -61,7 +68,7 @@ class ChristmasTest(unittest.TestCase):
             "On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.",
         ]
 
-        self.assertEqual(self.temp.xmas(0, 3), verseList)
+        self.assertEqual(self.temp.getVerses(0, 3), verseList)
 
 
 
