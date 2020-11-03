@@ -30,7 +30,14 @@ class Christmas:
     ]
 
     def getOneVerse(self, verseNumber):
+
         if isinstance(verseNumber, int):
+
+            lenXmas = len(self.daysOfXmas)
+            if verseNumber >= lenXmas or verseNumber < (-1) * lenXmas:
+                raise ValueError("Podaj liczbę z zakresu 0 - 11")
+
+            print(self.daysOfXmas[verseNumber])
             return self.daysOfXmas[verseNumber]
         else:
             raise ValueError
@@ -104,7 +111,7 @@ class ChristmasTest(unittest.TestCase):
         self.assertRaises(ValueError, self.temp.getVerses, "1", "1")
 
     def test_one_verse_must_give_number_in_range(self):
-        self.assertRaises(ValueError, self.temp.getOneVerse, 100)
+        self.assertRaises(ValueError, self.temp.getOneVerse, 12)
 
 
 
