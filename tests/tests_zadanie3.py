@@ -48,7 +48,7 @@ class Christmas:
             lenXmas = len(self.daysOfXmas)
             if fromVerse >= lenXmas or fromVerse < (-1) * lenXmas:
                 raise ValueError("Podaj liczbę z zakresu 0 - 11")
-            
+
             if toVerse >= lenXmas or toVerse < (-1) * lenXmas:
                 raise ValueError("Podaj liczbę z zakresu 0 - 11")
 
@@ -126,5 +126,8 @@ class ChristmasTest(unittest.TestCase):
 
     def test_verses_must_give_number_in_range_right(self):
         self.assertRaises(ValueError, self.temp.getVerses, 0, 12)
+
+    def test_verses_must_give_number_in_range_both(self):
+        self.assertRaises(ValueError, self.temp.getVerses, 12, 15)
 
 
