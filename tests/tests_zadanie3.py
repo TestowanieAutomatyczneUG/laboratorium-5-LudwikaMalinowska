@@ -36,11 +36,14 @@ class Christmas:
             raise ValueError
 
     def getVerses(self, fromVerse, toVerse):
-        verses = []
-        for i in range (fromVerse, toVerse, 1):
-            verses.append(self.daysOfXmas[i])
+        if isinstance(fromVerse, int):
+            verses = []
+            for i in range (fromVerse, toVerse, 1):
+                verses.append(self.daysOfXmas[i])
 
-        return verses
+            return verses
+        else:
+            raise ValueError
 
     def getAllSong(self):
         return self.daysOfXmas
