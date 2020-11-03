@@ -36,9 +36,9 @@ class Christmas:
             raise ValueError
 
     def getVerses(self, fromVerse, toVerse):
-        if isinstance(fromVerse, int):
+        if isinstance(fromVerse, int) and isinstance(toVerse, int):
             verses = []
-            for i in range (fromVerse, toVerse, 1):
+            for i in range(fromVerse, toVerse, 1):
                 verses.append(self.daysOfXmas[i])
 
             return verses
