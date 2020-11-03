@@ -49,7 +49,7 @@ class Christmas:
 
             leftNumberNotOK = fromVerse >= lenXmas or fromVerse < (-1) * lenXmas
             rightNumberNotOK = toVerse >= lenXmas or toVerse < (-1) * lenXmas
-            
+
             if leftNumberNotOK or rightNumberNotOK:
                 raise ValueError("Podaj liczbę z zakresu 0 - 11")
 
