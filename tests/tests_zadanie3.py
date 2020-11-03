@@ -30,7 +30,10 @@ class Christmas:
     ]
 
     def getOneVerse(self, verseNumber):
+        if isinstance(verseNumber, int):
             return self.daysOfXmas[verseNumber]
+        else:
+            raise ValueError
 
     def getVerses(self, fromVerse, toVerse):
         verses = []
