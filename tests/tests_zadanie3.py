@@ -40,6 +40,9 @@ class Christmas:
 
         return verses
 
+    def getAllSong(self):
+        return self.daysOfXmas
+
 
 
 
