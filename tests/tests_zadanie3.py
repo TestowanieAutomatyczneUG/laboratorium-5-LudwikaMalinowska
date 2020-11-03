@@ -44,6 +44,11 @@ class Christmas:
 
     def getVerses(self, fromVerse, toVerse):
         if isinstance(fromVerse, int) and isinstance(toVerse, int):
+
+            lenXmas = len(self.daysOfXmas)
+            if fromVerse >= lenXmas or fromVerse < (-1) * lenXmas:
+                raise ValueError("Podaj liczbę z zakresu 0 - 11")
+
             verses = []
             for i in range(fromVerse, toVerse, 1):
                 verses.append(self.daysOfXmas[i])
