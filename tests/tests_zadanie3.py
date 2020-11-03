@@ -121,4 +121,7 @@ class ChristmasTest(unittest.TestCase):
     def test_verses_must_give_number_in_range_left(self):
         self.assertRaises(ValueError, self.temp.getVerses, 12, 0)
 
+    def test_verses_must_give_number_in_range_right(self):
+        self.assertRaises(ValueError, self.temp.getVerses, 0, 12)
+
 
