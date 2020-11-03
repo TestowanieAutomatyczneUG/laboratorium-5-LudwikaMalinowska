@@ -46,10 +46,11 @@ class Christmas:
         if isinstance(fromVerse, int) and isinstance(toVerse, int):
 
             lenXmas = len(self.daysOfXmas)
-            if fromVerse >= lenXmas or fromVerse < (-1) * lenXmas:
-                raise ValueError("Podaj liczbę z zakresu 0 - 11")
 
-            if toVerse >= lenXmas or toVerse < (-1) * lenXmas:
+            leftNumberNotOK = fromVerse >= lenXmas or fromVerse < (-1) * lenXmas
+            rightNumberNotOK = toVerse >= lenXmas or toVerse < (-1) * lenXmas
+            
+            if leftNumberNotOK or rightNumberNotOK:
                 raise ValueError("Podaj liczbę z zakresu 0 - 11")
 
             verses = []
